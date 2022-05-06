@@ -6,7 +6,6 @@ import Login from "./Login";
 import Settings from "./Settings";
 
 const index = () => {
-  // debugger;
   return (
     <Routes>
       <Route path="/" element={<Home />} />

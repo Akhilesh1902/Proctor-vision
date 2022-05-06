@@ -3,36 +3,19 @@ import { Link } from "react-router-dom";
 import logo from "../assets/svg/logo.svg";
 import Cards from "../Components/Cards";
 import { users } from "../Components/user";
-// import Buttons from "../Components/Utils/Buttons";
-import { useSelector, useDispatch } from "react-redux";
-// import { login } from "../features/user";
+import { useDispatch } from "react-redux";
 import { login } from "../features";
 
-const Login = ({ setLocaluser }) => {
-  // console.log(users);
-  // const [localUser, setLocaluser] = useState();
-  // debugger;
-
-  const _user = useSelector((state) => state.userReducer.value);
-  // console.log(_user);
+const Login = () => {
   const dispatch = useDispatch();
 
   const [showCard, setShowCard] = useState(false);
   const [userName, setuserName] = useState("");
   const [password, setPassword] = useState("");
-
-  // console.log(userNam`e);
-  // console.log(password);`
-
   const btnClick = (e) => {
     e.preventDefault();
     const user = users.find((user) => user.name === userName);
-    // debugger;
-    // console.log(password);
     if (user && user.password === password) {
-      // console.log(user);
-      // debugger;
-      // localStorage.setItem("_user", JSON.stringify(user))
       dispatch(
         login({
           name: user.name,
@@ -46,7 +29,6 @@ const Login = ({ setLocaluser }) => {
     }
     console.log(user);
   };
-  // debugger;
   if (showCard) return <Cards />;
 
   return (
@@ -55,7 +37,6 @@ const Login = ({ setLocaluser }) => {
         <img src={logo} alt="" className="w-18 mb-6" />
         <form className="flex flex-col gap-6 items-center" onSubmit={btnClick}>
           <div className="block">
-            {/* <label htmlFor="username">UserName</label> */}
             <input
               type="text"
               name="username"
@@ -70,7 +51,6 @@ const Login = ({ setLocaluser }) => {
             />
           </div>
           <div className="block">
-            {/* <label htmlFor="username">UserName</label> */}
             <input
               type="password"
               name="password"

@@ -6,7 +6,7 @@ import { BsToggleOn, BsToggleOff } from "react-icons/bs";
 import { useNavigate, useParams } from "react-router-dom";
 import { users } from "../Components/user";
 
-const Settings = ({}) => {
+const Settings = () => {
   const { userName } = useParams();
   const user = users.find((u) => u.name === userName);
   const navigateTo = useNavigate();
