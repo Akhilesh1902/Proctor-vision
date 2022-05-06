@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+/* 
+.nav-links a.active {
+  color: cyan;
+} */
+/* 
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  color: cyan;
+  background-color: aqua;
+  stroke: cyan;
+  -webkit-appearance: none;
+} */
