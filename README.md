@@ -2,7 +2,7 @@
 
 ### A React Web App to manage exams.
 
-Visit site at :
+Visit site at : https://proctor-vision.netlify.app/
 
 ## Login details for testing:
 
